@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Christian James B. Chatto Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="profile-photo">
+      <img src="profile.jpg" alt="Christian James B. Chatto" />
+    </div>
+    <h1>Christian James B. Chatto</h1>
+    <p>IT STUDENT | ASPIRING WEB DEVELOPER</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">🌙</span>
+        <span class="theme-text">Dark Mode</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! My name is Christian James and I am a student passionate about learning and growing. I am always eager to expand my knowledge and skills in various fields, and I approach each new challenge with curiosity and enthusiasm. I believe that every opportunity to learn helps me become a better version of myself, and I'm excited to explore new ideas and develop a deeper understanding of the world around me.</p>
+      <h3>My Hobbies</h3>
+      <ul class="hobbies-list">
+        <li>
+          <div class="hobby-card">
+            <img src="gaming.jpg" alt="Gaming" class="hobby-image">
+            <span>🎮 Gaming</span>
+          </div>
+        </li>
+        <li>
+          <div class="hobby-card">
+            <img src="eating.jpg" alt="Eating" class="hobby-image">
+            <span>🍽️ Eating</span>
+          </div>
+        </li>
+        <li>
+          <div class="hobby-card">
+            <img src="running.jpg" alt="Running" class="hobby-image">
+            <span>🏃‍♂️ Running</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Javascript</li>
+      </ul>
+
+      <div class="learning-section">
+        <h3>What I've Learned</h3>
+        <div class="learning-card">
+          <h4>APIs</h4>
+          <p>I learned that APIs are tools that let different programs talk to each other. For example, an API can help me get data, like the weather, from another website and use it in my project.</p>
+        </div>
+
+        <div class="learning-card">
+          <h4>JavaScript Variables</h4>
+          <p>I also learned about JavaScript variables. They are like boxes where I can store information, like numbers or text, and use them in my code to make things work.</p>
+        </div>
+
+        <p class="learning-summary">Learning about APIs and variables helps me understand how websites get and use information.</p>
+      </div>
+
+      <h3>Code Example</h3>
+      <div class="code-example">
+        <pre><code>// Simple Counter Example
+let count = 0;
+
+function updateCounter() {
+  count++;
+  document.getElementById('counter').textContent = count;
+}</code></pre>
+        <div class="demo">
+          <p>Count: <span id="counter" class="counter-display">0</span></p>
+          <button type="button" onclick="updateCounter()">Click Me!</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <div class="contact-card">
+          <h3>📧 Email</h3>
+          <p><a href="mailto:chattocj25@gmail.com">chattocj25@gmail.com</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>📱 Phone</h3>
+          <p><a href="tel:+1234567890">+63 951 131 8950</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>💻 GitHub</h3>
+          <p><a href="https://github.com/ceji111" target="_blank">github.com/ceji111</a></p>
+        </div>
+      </div>
+
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required 
+                 pattern="[A-Za-z\s]{2,50}"
+                 title="Please enter a valid name (2-50 characters, letters only)">
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required
+                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                 title="Please enter a valid email address">
+          <span class="error-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required
+                    minlength="10" maxlength="500"
+                    title="Please enter a message (10-500 characters)"></textarea>
+          <span class="error-message"></span>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Chatto</p>
+  </footer>
+</body>
+</html>
